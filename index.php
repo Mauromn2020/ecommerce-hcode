@@ -13,7 +13,7 @@ $app->get('/', function() {
 	<hr>PÁGINA INICIAL <br>
 	<small>Ecommerce Hcode</small>><hr>
 	</h2>
-	<p><a href='/Home'>Home</a> | <a href='/'>Início</a></p>
+	<p><a href='/Home'>Home</a> | <a href='/'>Início</a> | <a href='/Pdo'>Pdo</a></p>
 	</center>
 	";
 });
@@ -25,14 +25,18 @@ $app->get('/Home', function() {
 	<hr>HOME PAGE<br>
 	<small>Ecommerce Hcode</small>><hr>
 	</h2>
-	<p><a href='/Home'>Home</a> | <a href='/'>Início</a></p>
+	<p><a href='/Home'>Home</a> | <a href='/'>Início</a> | <a href='/Pdo'>Pdo</a></p>
 	</center>
 	";
 });
 
+$app->get('/Pdo', function(){
+	$sql = new Hcode\DB\Sql();
+	$results = $sql->select("SELECT * FROM tb_users");
+	echo json_encode($results);
+});
 
 $app->run();
 
- ?>
+?>
 
-  
