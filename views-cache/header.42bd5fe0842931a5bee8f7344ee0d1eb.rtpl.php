@@ -43,7 +43,11 @@
                             <li><a href="#"><i class="fa fa-user"></i> Minha Conta</a></li>
                             <li><a href="#"><i class="fa fa-heart"></i> Lista de Desejos</a></li>
                             <li><a href="#"><i class="fa fa-shopping-cart"></i> Meu Carrinho</a></li>
-                            <li><a href="#"><i class="fa fa-lock"></i> Login</a></li>
+                            <li><a href="#"><i class="fa fa-lock"></i> Login</a></li> 
+                            <li><a href="/Admin"><i class="fa fa-lock"></i> Admin</a></li> 
+                            <li><a href="/Pdo"><i class="fa fa-lock"></i> Usuarios</a></li> 
+
+                            
                         </ul>
                     </div>
                 </div>
