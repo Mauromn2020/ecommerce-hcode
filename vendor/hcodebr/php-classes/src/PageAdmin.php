@@ -8,6 +8,8 @@ class PageAdmin {
     private $tpl;
     private $options = [];
     private $defaults = [
+        "header"=>true,
+        "footer"=>true,
         "data"=>[]
     ];
 
@@ -28,7 +30,7 @@ class PageAdmin {
 
         $this->tpl = new Tpl;
         $this->setData( $this->options["data"] );            
-        $this->tpl->draw("header");
+        if( $this->options["header"] === true ) $this->tpl->draw("header");
     }
     
 
@@ -41,7 +43,7 @@ class PageAdmin {
 
     /********* CRIA O FOOTER PA PÁGINA ************** */
     public function __destruct(){
-        $this->tpl->draw("footer"); 
+        if( $this->options["footer"] === true ) $this->tpl->draw("footer"); 
     }
 
 
@@ -51,7 +53,6 @@ class PageAdmin {
             $this->tpl->assign( $key, $value );
         }
     }
-
 
 
 } // FECHA A CLASSE
@@ -64,12 +65,8 @@ class PageAdmin {
     namespace Hcode;
 
     class PageAdmin extends Page {
-
         public function __construct( $opts = array(), $tpl_dir = "/views/admin/"){
-
-                parent::__construct($opts, $tpl_dir);
-
+            parent::__construct($opts, $tpl_dir);
         }
-
     }
 -->

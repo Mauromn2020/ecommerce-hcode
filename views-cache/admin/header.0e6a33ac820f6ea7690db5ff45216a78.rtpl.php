@@ -58,11 +58,11 @@ desired effect
   <header class="main-header">
 
     <!-- Logo -->
-    <a href="/res/admin/index2.html" class="logo">
+    <a href="/" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>A</b>LT</span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>Admin</b>LTE</span>
+      <span class="logo-lg">MM<b>Sites</b></span>
     </a>
 
     <!-- Header Navbar -->
@@ -209,7 +209,7 @@ desired effect
                   <a href="#" class="btn btn-default btn-flat">Profile</a>
                 </div>
                 <div class="pull-right">
-                  <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                  <a href="/admin/logout" class="btn btn-default btn-flat">Sign out</a>
                 </div>
               </li>
             </ul>
@@ -259,10 +259,27 @@ desired effect
 
       <!-- Sidebar Menu -->
       <ul class="sidebar-menu">
-        <li class="header">HEADER</li>
+        <li class="header">MENU PRINCIPAL</li>
         <!-- Optionally, you can add icons to the links -->
-        <li class="active"><a href="#"><i class="fa fa-link"></i> <span>Link</span></a></li>
-        <li><a href="#"><i class="fa fa-link"></i> <span>Another Link</span></a></li>
+
+         <li class="treeview">
+          <a href="#"><i class="fa fa-link"></i> <span>Meu menu</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="/">Página Inicial</a></li>
+            <li><a href="/Pdo">Json Usuarios</a></li>
+            <li><a href="/Home">Home Page</a></li>
+            <li><a href="/Admin">Administração</a></li>
+          </ul>
+        </li>        
+        
+        <li class="active"><a href="#"><i class="fa fa-link"></i> <span>Links</span></a></li>
+        
+        <li><a href="#"><i class="fa fa-link"></i> <span>Another Links</span></a></li>
+        
         <li class="treeview">
           <a href="#"><i class="fa fa-link"></i> <span>Multilevel</span>
             <span class="pull-right-container">
@@ -274,6 +291,12 @@ desired effect
             <li><a href="#">Link in level 2</a></li>
           </ul>
         </li>
+
+
+
+        
+
+
       </ul>
       <!-- /.sidebar-menu -->
     </section>
