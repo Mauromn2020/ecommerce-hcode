@@ -1,16 +1,3 @@
-<?php if(!class_exists('Rain\Tpl')){exit;}?><!-- Main Footer -->
-<footer class="main-footer">
-    <!-- To the right -->
-    <div class="pull-right hidden-xs">
-      Anything you want
-    </div>
-    <!-- Default to the left -->
-    <strong>Copyright &copy; 2020 <a href="#">Company</a>.</strong> All rights reserved.
-  </footer>
-
-
-
-
  <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">
     <!-- Create the tabs -->
@@ -126,7 +113,6 @@
 
       </div>
 
-
       <!-- /.tab-pane -->
       <!-- Stats tab content -->
       <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div>
@@ -206,83 +192,3 @@
   <!-- Add the sidebar's background. This div must be placed
        immediately after the control sidebar -->
   <div class="control-sidebar-bg"></div>
-
-
-
-
-
-
-
-
-
-
-</div><!-- ./wrapper -->
-
-<!-- REQUIRED JS SCRIPTS -->
-
-<!-- jQuery 2.2.3 -->
-<script src="/res/admin/plugins/jQuery/jquery-2.2.3.min.js"></script>
-<!-- Bootstrap 3.3.6 -->
-<script src="/res/admin/bootstrap/js/bootstrap.min.js"></script>
-<!-- AdminLTE App -->
-<script src="/res/admin/dist/js/app.min.js"></script>
-
-<!-- DataTables -->
-<script src="/res/admin/plugins/datatables/jquery.dataTables.min.js"></script>
-<script src="/res/admin/plugins/datatables/dataTables.bootstrap.min.js"></script>
-
-<!-- SlimScroll -->
-<script src="http://curso-hcode.com/res/admin/plugins/slimScroll/jquery.slimscroll.min.js"></script>
-<!-- FastClick -->
-<script src="http://curso-hcode.com/res/admin/plugins/fastclick/fastclick.js"></script>
-<!-- AdminLTE App -->
-<script src="http://curso-hcode.com/res/admin/dist/js/app.min.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="http://curso-hcode.com/res/admin/dist/js/demo.js"></script>
-<!-- page script -->
-
-
-<script>
-  $(function () {	  
-	  
-	$( '#example1' ).DataTable(
-	/*{
-	"language": {
-		"lengthMenu": "Mostrar _MENU_ registros/página",
-		"zeroRecords": "Nenhum resultado na busca!",
-		"searchPlaceholder": "",
-		"info": "Mostrando de _START_ até _END_ de _TOTAL_ registros.",
-		"infoEmpty": "Não existem registros.",
-		"infoFiltered": "(filtrados de um total de _MAX_ registros)",
-		"search": "Buscar:",
-		"paginate": {
-			"first": "Primeiro",
-			"last": "Último",
-			"next": "Próximo",
-			"previous": "Anterior",
-		},
-	},
-	dom: 'Bfrtip',
-	buttons: [ 'copy', 'csv', 'excel', 'pdf', 'print' ],
-	}*/
-	); 
-	  
-	  
-    $('#example2').DataTable({
-      "paging": true,
-      "lengthChange": false,
-      "searching": false,
-      "ordering": true,
-      "info": true,
-      "autoWidth": false
-    });
-  });
-	
-	
-</script>
-
-
-
-
-</body>
-</html>

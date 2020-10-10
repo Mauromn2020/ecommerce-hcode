@@ -17,36 +17,22 @@ class User extends Model {
         $results = $sql->select(" SELECT * FROM tb_users WHERE deslogin = :LOGIN ", array(
             ":LOGIN"=>$login
         ));
-		
-		
+
+		// Se result for zero desvia para pg login	
         if( count($results) === 0 ){
-            //throw new \Exception("USUÁRIO INVÁLIDO !"); 
 			header('Location: /admin/login');			
 			exit;
         }
 
         $data = $results[0];
 		
-		//echo $password.'<br>'.$data["despassword"] ;
-		
-//		if($password == $data["despassword"]){			
-//			//echo('<br>SENHAS IGUAIS!');
-//			$user = new User();
-//			$user->setData($data);
-//			
-//			$_SESSION[User::SESSION] = $user->getValues();
-//			
-//			return $user;
-//		}else{
-//			echo('<br>SENHAS DESIGUAIS!');
-//			throw new \Exception("SENHA INVÁLIDA !");
-//		}
 		
 		
-		
+/*--------------------------------------------------------------
+Password-verify - Verifica se o password é igual ao passado 
+--------------------------------------------------------------*/		
 		/**Se o password for igual ao passado */
         if ( password_verify( $password, $data["despassword"] ) === true ) {
-
 			$user = new User();
 			$user->setData($data);	
 			$_SESSION[User::SESSION] = $user->getValues();
@@ -57,7 +43,10 @@ class User extends Model {
 		}
 		
     }		
-		
+
+/*--------------------------------------------------------------
+VerifyLogin - Verifica se esta logado, etc...
+--------------------------------------------------------------*/	
 		public static function verifyLogin( $inadmin = true ){
 			if(
 				! isset($_SESSION[User::SESSION]) ||
@@ -66,14 +55,25 @@ class User extends Model {
 				(bool)$_SESSION[User::SESSION]["inadmin"] !== $inadmin				
 			){
 				header("Location: /admin/login");	
+				exit;
 			}	
 		}
 	
+/*--------------------------------------------------------------
+List All - Lista os usuário do banco de dados
+--------------------------------------------------------------*/
+		public function listAll(){
+			header("Location:/admin/login");
+			exit;
+		}
 	
-        
-		public static function logout()
-		{
-			$_SESSION[User::SESSION] = NULL;
+	
+ 
+/*--------------------------------------------------------------
+Logout - Desloga o usuário
+--------------------------------------------------------------*/	
+		public static function logout()	{
+			$_SESSION[ User::SESSION ] = NULL;
 		}
 
 }

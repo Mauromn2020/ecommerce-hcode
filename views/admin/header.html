@@ -7,7 +7,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE 2 | Starter</title>
+  <title>Ecommerce mmsites</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.6 -->
@@ -18,12 +18,18 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="/res/admin/dist/css/AdminLTE.min.css">
+	
   <!-- AdminLTE Skins. We have chosen the skin-blue for this starter
         page. However, you can choose any other skin. Make sure you
-        apply the skin class to the body tag so the changes take effect.
-  -->
-  <link rel="stylesheet" href="/res/admin/dist/css/skins/skin-blue.min.css">
+        apply the skin class to the body tag so the changes take effect. -->
+  <link rel="stylesheet" href="/res/admin/dist/css/skins/skin-yellow.min.css">
+  <link rel="stylesheet" href="/res/admin/dist/css/skins/_all-skins.min.css">	
 
+  <!-- DataTables -->
+  <link rel="stylesheet" href="/res/admin/plugins/datatables/dataTables.bootstrap.css">
+  
+
+	
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
@@ -51,7 +57,7 @@ desired effect
 |               | sidebar-mini                            |
 |---------------------------------------------------------|
 -->
-<body class="hold-transition skin-blue sidebar-mini">
+<body class="hold-transition skin-yellow sidebar-mini">
 <div class="wrapper">
 
   <!-- Main Header -->
@@ -174,17 +180,17 @@ desired effect
             <!-- Menu Toggle Button -->
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <!-- The user image in the navbar-->
-              <img src="/res/admin/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+              <img src="/res/admin/dist/img/usuario.png" class="user-image" alt="User Image">
               <!-- hidden-xs hides the username on small devices so only the image appears. -->
-              <span class="hidden-xs">Alexander Pierce</span>
+              <span class="hidden-xs">Mauro Mendes</span>
             </a>
             <ul class="dropdown-menu">
               <!-- The user image in the menu -->
               <li class="user-header">
-                <img src="/res/admin/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                <img src="/res/admin/dist/img/usuario.png" class="img-circle" alt="User Image">
 
                 <p>
-                  Alexander Pierce - Web Developer
+                  Mauro Mendes - Web Developer
                   <small>Member since Nov. 2012</small>
                 </p>
               </li>
@@ -209,7 +215,7 @@ desired effect
                   <a href="#" class="btn btn-default btn-flat">Profile</a>
                 </div>
                 <div class="pull-right">
-                  <a href="/admin/logout" class="btn btn-default btn-flat">Sign out</a>
+                  <a href="/admin/logout" class="btn btn-default btn-flat">Deslogar</a>
                 </div>
               </li>
             </ul>
@@ -231,10 +237,10 @@ desired effect
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel">
         <div class="pull-left image">
-          <img src="/res/admin/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+          <img src="../../res/admin/dist/img/usuario.png" class="img-circle" alt="Resposta para imagem de usuario">
         </div>
         <div class="pull-left info">
-          <p>Alexander Pierce</p>
+          <p>Mauro Mendes</p>
           <!-- Status -->
           <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>
@@ -261,27 +267,26 @@ desired effect
       <ul class="sidebar-menu">
         <li class="header">MENU PRINCIPAL</li>
         <!-- Optionally, you can add icons to the links -->
-
+<li class="active"><a href="/admin"><i class="fa fa-link"></i> <span>HOME</span></a></li>
          <li class="treeview">
-          <a href="#"><i class="fa fa-link"></i> <span>Meu menu</span>
+          <a href="#"><i class="fa fa-book"></i> <span> CADASTROS</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
+              
+            </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="/">Página Inicial</a></li>
-            <li><a href="/Pdo">Json Usuarios</a></li>
-            <li><a href="/Home">Home Page</a></li>
-            <li><a href="/Admin">Administração</a></li>
+            <li><a href="/admin/users"><i class="fa fa-users pull-lefth" style="color: #F7EC5E;"></i>Users</a></li>
+            <li><a href="/admin/usuarios"><i class="fa fa-users pull-lefth" style="color: #F7EC5E;"></i>Usuarios</a></li>			  
+			  
           </ul>
         </li>        
         
-        <li class="active"><a href="#"><i class="fa fa-link"></i> <span>Links</span></a></li>
-        
-        <li><a href="#"><i class="fa fa-link"></i> <span>Another Links</span></a></li>
+        <li class="active"><a href="#"><i class="fa fa-link"></i> <span>LINKS</span></a></li>
         
         <li class="treeview">
-          <a href="#"><i class="fa fa-link"></i> <span>Multilevel</span>
+          <a href="#"><i class="fa fa-link"></i> <span>MULTINIVEL</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>

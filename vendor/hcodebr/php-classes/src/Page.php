@@ -1,6 +1,8 @@
 <?php 
 namespace Hcode ;  // vendor/hcodebr/php-classes/src
 use Rain\Tpl;      // vendor/rain/raintpl/library/Rain/Tpl.php
+use \Hcode\Model\Mf;
+
 
 class Page {
 
@@ -13,7 +15,7 @@ class Page {
     ];
 
 
-    /** CRIA O HEADER DA PÁGINA ******************* */
+    /******* CRIA O HEADER DA PÁGINA ******************* */
     public function __construct( $opts = array() ){
 
         //Junta as opções recebidas $opts no construct, com as do array defaults[]
