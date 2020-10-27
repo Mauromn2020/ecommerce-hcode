@@ -7,15 +7,31 @@ use \Slim\Slim;
 use \Hcode\Page;
 use \Hcode\PageAdmin;
 use \Hcode\Model\User;
-use \Hcode\Model\Mf;
+use \Hcode\Mmsites\Mf;
 
 $app = new \Slim\Slim();
-$mf = new Mf();
-//$mf->alerta('EMPRESA.SLOGAN');
-
+//$mf  = new Mf();
+//$mf->alerta(EMPRESA.'\n'.SLOGAN);
+//$mf->msg('success','Mensagem aqui !');
+//$mf->msg('danger','Mensagem aqui !');
+//$mf->msg('warning','Mensagem aqui !');
 
 $app->config('debug', true);
 
+
+$app->get('/tst', function(){	
+	User::verifyLogin();
+	echo 'TESTE<br>';
+	echo session_encode() ;
+	echo '<br>A session esta ativa ? ';
+	echo session_status() === PHP_SESSION_ACTIVE ? TRUE : FALSE;
+	echo '<br>'. session_id();
+	echo '<br>'. session_name();
+	echo '<br>'. session_cache_expire();
+	echo '<br>'. substr(session_encode(), 53, 8);
+	echo '<br>'. substr(session_encode(), 91, 7);
+	$sessao = explode( ";", session_encode() );
+});
 
 $app->get('/', function() { 	
 	$page = new Page();

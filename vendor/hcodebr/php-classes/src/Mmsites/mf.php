@@ -1,7 +1,5 @@
 <?php 
-	namespace Hcode\Model;
-
-	use \Hcode\Model;
+	namespace Hcode\Mmsites;
 
 	class Mf {		
 		

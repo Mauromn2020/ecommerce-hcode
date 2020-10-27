@@ -273,8 +273,6 @@ desired effect
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
-              
-            </span>
           </a>
           <ul class="treeview-menu">
             <li><a href="/admin/users"><i class="fa fa-users pull-lefth" style="color: #F7EC5E;"></i>Users</a></li>
@@ -283,9 +281,10 @@ desired effect
           </ul>
         </li>        
         
-        <li class="active"><a href="#"><i class="fa fa-link"></i> <span>LINKS</span></a></li>
-        
-        <li class="treeview">
+        <li class="active"><a href="/"><i class="fa fa-link"></i> <span>VOLTAR LOJA</span></a></li>
+
+		<li><hr></li>        
+        <!--<li class="treeview">
           <a href="#"><i class="fa fa-link"></i> <span>MULTINIVEL</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
@@ -295,7 +294,7 @@ desired effect
             <li><a href="#">Link in level 2</a></li>
             <li><a href="#">Link in level 2</a></li>
           </ul>
-        </li>
+        </li>-->
 
 
 
